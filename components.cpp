@@ -9,6 +9,6 @@ int main(int argc, char * argv[])
 		std::cout << "Enter input filename and output filename.\n";
 		return argc;
 	}
-	Image(argv[1]).connected_components().print(argv[2]);
+	Image(argv[1]).connected_components().print(argv[2]).print();
 	return 0;
 }

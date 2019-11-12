@@ -18,8 +18,8 @@ public:
 	Image(Image &&);
 	Image & operator=(Image &&);
 	Image connected_components() const;
-	void print() const;
-	void print(const char * filename) const;
+	const Image & print() const;
+	const Image & print(const char *) const;
 	size_type rows() const;
 	size_type columns() const;
 private:
@@ -32,7 +32,7 @@ private:
 	int third_pass();
 	std::vector<std::vector<int>> _image;
 	std::vector<int> _equivalent;
-	static constexpr int _w = 4;
+	static constexpr int _w = 3;
 };
 
 #endif

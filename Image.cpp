@@ -39,7 +39,7 @@ Image Image::connected_components() const
 	return frame;
 }
 
-void Image::print() const
+const Image & Image::print() const
 {
 	for (auto & row : _image)
 	{
@@ -53,9 +53,10 @@ void Image::print() const
 		}
 		std::cout << '\n';
 	}
+	return *this;
 }
 
-void Image::print(const char * filename) const
+const Image & Image::print(const char * filename) const
 {
 	std::ofstream ofs(filename);
 	for (auto & row : _image)
@@ -70,6 +71,7 @@ void Image::print(const char * filename) const
 		}
 		ofs << '\n';
 	}
+	return *this;
 }
 
 Image::size_type Image::rows() const
