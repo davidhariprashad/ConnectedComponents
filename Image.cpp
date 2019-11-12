@@ -41,12 +41,11 @@ Image Image::connected_components() const
 
 void Image::print() const
 {
-	constexpr int w = 4;
 	for (auto & row : _image)
 	{
 		for (auto & column : row)
 		{
-			std::cout << std::setw(w);
+			std::cout << std::setw(_w);
 			if (column != 0)
 				std::cout << column;
 			else
@@ -58,13 +57,12 @@ void Image::print() const
 
 void Image::print(const char * filename) const
 {
-	constexpr int w = 4;
 	std::ofstream ofs(filename);
 	for (auto & row : _image)
 	{
 		for (auto & column : row)
 		{
-			ofs << std::setw(w);
+			ofs << std::setw(_w);
 			if (column != 0)
 				ofs << column;
 			else

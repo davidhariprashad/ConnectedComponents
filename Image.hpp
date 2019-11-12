@@ -32,6 +32,7 @@ private:
 	int third_pass();
 	std::vector<std::vector<int>> _image;
 	std::vector<int> _equivalent;
+	static constexpr int _w = 4;
 };
 
 #endif
